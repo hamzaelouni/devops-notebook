@@ -1,3 +1,4 @@
+## nslookup
 nslookup (Name Server Lookup):  Command line utility that talks to DNS servers, 
 so that we can recreate the queries that all of our other servers are doing in the background.
 
@@ -97,20 +98,7 @@ Parce que Level 3 est un acteur **indépendant de ton FAI et de Google**. Si tu 
 C'est juste un autre point de mesure indépendant, ni meilleur ni moins bon que `8.8.8.8`, utilisé précisément parce qu'il est **différent**
 
 ---
+## DIG
+Dig is generally preferred over nslookup for DNS lookups, but they serve the same purpose.
 
-`A record → IPv4`
-
-Retourne une adresse sur 32 bits, le format qu'on connait tous :
-itpro.tv  →  192.124.249.106
-
-`AAAA record → IPv6`
-
-Retourne une adresse sur 128 bits, le "nouveau" format :
-itpro.tv  →  2606:4700:3037::ac43:912e
-
-`Pourquoi IPv6 existe ?`
-
-**IPv4 c'est 32 bits → 4 milliards d'adresses maximum**. En 2011, le stock mondial d'IPv4 était officiellement épuisé. Il y a trop d'appareils connectés dans le monde.
-IPv6 c'est 128 bits → 340 undécillions d'adresses (un nombre tellement grand qu'on pourrait donner une IP unique à chaque grain de sable sur Terre plusieurs fois).
-
-
+Dig does a lot of the same things that NsLookup does, but it does some extra things that are actually pretty handy for us to see and use.

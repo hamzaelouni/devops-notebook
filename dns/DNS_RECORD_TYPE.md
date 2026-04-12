@@ -35,7 +35,29 @@ C'est ça la délégation de zone.
 
 
 **Ce qui se passe concrètement quand quelqu'un résout offer-api.api.auchan.fr**
-① Google demande au serveur racine → redirigé vers le TLD .fr
-② Le TLD .fr répond : "pour auchan.fr → va voir l'infra centrale"
-③ L'infra centrale répond : "pour api.auchan.fr → je ne gère pas, va voir ns1.awsdns.com" — c'est le NS record de délégation
-④ AWS Route 53 (ns1.awsdns.com) répond : "offer-api.api.auchan.fr = 35.200.12.44" — réponse finale
+1. Google demande au serveur racine → redirigé vers le TLD .fr
+2. Le TLD .fr répond : "pour auchan.fr → va voir l'infra centrale"
+3. L'infra centrale répond : "pour api.auchan.fr → je ne gère pas, va voir ns1.awsdns.com" — c'est le NS record de délégation
+4. AWS Route 53 (ns1.awsdns.com) répond : "offer-api.api.auchan.fr = 35.200.12.44" — réponse finale
+
+
+---
+
+
+
+`A record → IPv4`
+
+Retourne une adresse sur 32 bits, le format qu'on connait tous :
+itpro.tv  →  192.124.249.106
+
+`AAAA record → IPv6`
+
+Retourne une adresse sur 128 bits, le "nouveau" format :
+itpro.tv  →  2606:4700:3037::ac43:912e
+
+`Pourquoi IPv6 existe ?`
+
+**IPv4 c'est 32 bits → 4 milliards d'adresses maximum**. En 2011, le stock mondial d'IPv4 était officiellement épuisé. Il y a trop d'appareils connectés dans le monde.
+IPv6 c'est 128 bits → 340 undécillions d'adresses (un nombre tellement grand qu'on pourrait donner une IP unique à chaque grain de sable sur Terre plusieurs fois).
+
+

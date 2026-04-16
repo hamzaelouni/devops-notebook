@@ -188,5 +188,4 @@ The in-addr.arpa zone for a block is delegated by the IP owner (your ISP or clou
 - You cannot self-manage PTR records unless your provider delegates the reverse zone to you
 - On GCP, AWS, Azure — you configure PTR records through the cloud console or API, not through your domain registrar
 
----
-When to use them ?
+
